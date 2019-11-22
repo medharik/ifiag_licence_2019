@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>les forms en html 5</title>
+    <style>
+      label {
+        cursor: pointer;
+        color: blue;
+      }
+      th {
+        text-align: right;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body oncontextmenu="return  false">
+    <form action="contact.html" method="GET">
+      <!--
+    table>tr*4>((th>label)+(td>input))
+-->
+      <table align="center">
+        <tr>
+          <th><label for="email ">Email (*)</label></th>
+          <td>
+            <input
+              type="email"
+              name="ewemail"
+              id="email"
+              pattern="[a-zA-Z._]{4,}@ifiag.ma"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="p">Mot de passe </label></th>
+          <td>
+            <input
+              type="password"
+              placeholder="Mot de passe "
+              name="pp"
+              id="test"
+              pattern="[a-z0-9_]{4,}"
+              autocomplete="off"
+            />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="date">Date de naissance </label></th>
+          <td><input required type="date" name="date" id="date" /></td>
+        </tr>
+        <tr>
+          <th><label>Sexe : </label></th>
+          <td>
+            <label for="homme">Homme </label>
+            <input type="radio" name="a" id="homme" value="homme" />
+            <label for="femme">Femme </label>
+            <input type="radio" name="a" id="femme" value="femme" />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="col">Couleur </label></th>
+          <td><input type="color" name="col" id="col" /></td>
+        </tr>
+        <tr>
+          <th><label for="salaire"> Salaire </label></th>
+          <td>
+            <input
+              readonly
+              type="number"
+              name="salaire"
+              id="salaire"
+              step="0.01"
+              min="10"
+              max="10000"
+              value="100"
+              disabled
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Tel</td>
+          <td><input type="tel" name="phone" id="phone" /></td>
+        </tr>
+        <tr>
+          <td>Recherche</td>
+          <td><input type="search" name="s" id="s" /></td>
+        </tr>
+        <tr>
+          <td><label for="ville">Ville</label></td>
+          <td>
+            <input
+              type="text"
+              name="ville"
+              id="ville"
+              list="villes"
+              autocomplete="off"
+            />
+            <datalist id="villes" style="display: none">
+              <option value="casa">Casa</option>
+              <option value="chefouen">Chefchaouen</option>
+              <option value="rabat">Rabat</option>
+            </datalist>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="adresse"></label></th>
+          <td>
+            <textarea
+              placeholder="Entrer votre adresse"
+              type="checkbox"
+              name="adresse"
+              id="adresse"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="ep">Enregistrer le mot de passe </label></th>
+          <td><input type="checkbox" name="ep" id="ep" /></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>
+            <input type="submit" value="Envoyer" />
+            <input type="reset" value="RAZ" />
+            <input
+              type="button"
+              value="RIEN par defaut"
+              onclick=" confirm('envoyer?')"
+            />
+
+            <button type="submit" onclick=" return  confirm('Envoyer ?')">
+              Valider
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>Competences</td>
+          <td>
+            <select name="cp[]" id="cp" multiple size="3">
+              <option value="info">Info</option>
+              <option value="gest">GEst</option>
+              <option value="merke">Marke</option>
+              <option value="" selected>Specialite...</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+
+      <input type="hidden" name="id" value="1" style="display: none" />
+    </form>
+  </body>
+</html>

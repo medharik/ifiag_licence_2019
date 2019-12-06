@@ -1,0 +1,99 @@
+@import url("reset.css");
+* {
+  font-family: sans-serif;
+}
+header {
+  width: 100%;
+  height: 50px;
+  background: black;
+  box-shadow: 1px 2px 4px rgb(117, 116, 116);
+  border-bottom: 2px solid white !important;
+}
+
+.b {
+  border: 2px solid black;
+  box-sizing: border-box;
+}
+main {
+  width: calc(100% - 20px);
+  padding: 0 10px;
+  min-height: 800px;
+  margin: auto;
+}
+section.c {
+  width: 100%;
+  min-height: 500px;
+}
+#pub {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  margin: auto;
+  position: relative;
+}
+#pub > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -2;
+}
+#pub h1 {
+  font-size: 3em;
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+}
+#catalogue {
+}
+.demi {
+  width: 50%;
+  min-height: 400px;
+
+  float: left;
+}
+.n {
+  clear: both;
+}
+nav {
+  text-align: center;
+}
+nav > a {
+  display: inline-block;
+  padding: 10px 30px;
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: sans-serif;
+  font-family: 1.1em;
+}
+nav > a:hover {
+  background: rgb(83, 82, 82);
+}
+.fluid {
+  width: 100%;
+}
+.centre_parfait {
+  margin: auto;
+  width: 50%;
+}
+#fx {
+  display: flex;
+}
+#fx .b {
+  width: 100%;
+}
+.x {
+  display: flex;
+  flex-direction: column;
+}
+
+.x .b {
+  height: 100%;
+  width: 100%;
+}

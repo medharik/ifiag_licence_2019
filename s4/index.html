@@ -17,9 +17,9 @@
             a[href="#$"]{lien$}*8
         -->
 
-        <a href="#1" class="b">lien 1</a>
-        <a href="#2" class="b">Qui sommes nous</a>
-        <a href="#3" class="b">lien 3</a>
+        <a href="#i1" class="b">lien 1</a>
+        <a href="#i2" class="b">Qui sommes nous</a>
+        <a href="#i3" class="b">lien 3</a>
         <a href="#4" class="b">lien 4</a>
         <a href="#5" class="b">lien 5</a>
         <a href="#6" class="b">lien 6</a>
@@ -52,16 +52,108 @@
             <div class="b"></div>
           </div>
         </div>
+        <div class="demi b" id="i1">
+          div i1
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+            veritatis quidem minima ducimus doloribus aliquid fugit vero ipsam,
+            exercitationem a eum corporis! Voluptates, in perspiciatis alias
+            tenetur optio qui atque! Ex, adipisci. Quae reiciendis atque aliquid
+            quo vitae ipsam, vero quam voluptate laboriosam ullam nam accusamus
+            similique sequi? Pariatur repellendus ut accusantium numquam quam
+            eius. Assumenda fugiat beatae iusto. Doloribus! Eos mollitia modi
+            nostrum explicabo minima suscipit possimus veniam laboriosam, quas
+            debitis, odit inventore eaque placeat sed ut dicta facilis doloribus
+            nulla laborum distinctio veritatis quis ipsa. Id, quo enim!
+            Quibusdam doloremque quos similique cumque fugiat voluptatum. Ad
+            perferendis autem quia odio maiores est nobis animi sint amet,
+            repellat quaerat distinctio incidunt culpa? Voluptatem eius sequi
+            assumenda nobis, porro voluptas! Vero consequatur perferendis quae
+            nisi deserunt quidem accusantium accusamus repellat. Quae quod
+            earum, possimus veritatis excepturi beatae atque obcaecati eius
+            tempora! Eos doloremque cupiditate enim dolore nemo, neque odit
+            nostrum! Alias sunt quam nulla saepe non dolorum architecto esse
+            reprehenderit temporibus accusantium natus neque, adipisci odio
+            officiis labore. Distinctio voluptatum dignissimos animi repellat
+            maiores amet maxime illo doloremque sint doloribus! Perspiciatis sed
+            tenetur corporis placeat voluptatibus veniam maiores vitae id rem
+            nulla animi eum cum corrupti at quas numquam error ullam, pariatur
+            ipsam doloremque. Hic doloribus eligendi minus eos nemo? Facere
+            aliquid voluptatibus exercitationem ea non deleniti tenetur corrupti
+            eligendi nemo alias perferendis neque, placeat aliquam distinctio,
+            voluptas repellendus magnam officiis, suscipit voluptatem vel ipsam
+            nam iusto similique! Temporibus, similique? Excepturi, eaque error.
+            At quo earum rem facilis cupiditate maxime, accusamus assumenda
+            laudantium fugit minima non suscipit iste est doloribus enim aliquid
+            explicabo harum rerum, beatae ut excepturi distinctio voluptatum?
+            Pariatur deleniti inventore odit officia exercitationem obcaecati
+            harum vero rerum dolorum. Soluta, vel vitae odio quasi hic tempore
+            exercitationem non dicta velit repellendus quidem ipsum accusamus ab
+            molestias sapiente! Perferendis!
+          </p>
+        </div>
         <div class="demi b"></div>
         <div class="demi b"></div>
         <div class="demi b"></div>
+        <div class="demi b" id="i2">
+          div i2
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat
+            explicabo est et ipsum ducimus, iusto dolorum, eaque, error quasi
+            nulla ea esse? Rem quidem sint ipsam laudantium illum ducimus
+            repellendus. Hic sapiente cupiditate in. Ipsum debitis ducimus quam
+            provident. Earum officia distinctio deleniti architecto fuga,
+            reprehenderit repellendus impedit? Ipsa maxime autem vitae
+            perferendis dicta. Minima culpa vitae enim nihil fugit? Quasi
+            voluptates sunt, hic distinctio harum odit totam soluta dignissimos
+            rerum ullam, repellat commodi dolorum, quaerat vel quia aspernatur
+            non fugit porro obcaecati alias in corporis exercitationem?
+            Obcaecati, doloribus officia! Fuga quis voluptas aperiam iusto
+            pariatur error in, tempora ea ab nam temporibus eum vel aliquid
+            dicta, animi ipsa nisi molestiae, totam molestias. Architecto
+            quibusdam pariatur ipsum. Illo, minus tempore! Quasi mollitia
+            perspiciatis neque quidem, quia at eos tenetur praesentium,
+            dignissimos odit consequuntur non quas placeat cupiditate minima
+            iste eaque vero maxime veniam rem quibusdam nostrum! Quod nam
+            accusamus dolore!
+          </p>
+        </div>
         <div class="demi b"></div>
-        <div class="demi b"></div>
-        <div class="demi b"></div>
-        <div class="demi b"></div>
+        <div class="demi b" id="i3"></div>
         <div class="n"></div>
       </section>
     </main>
     <footer class="b"></footer>
+    <script
+      src="jquery-3.1.0.js"
+     
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function() {
+        $(document).on("click", "a", function(e) {
+          e.preventDefault();
+          var d = $(this).attr("href");
+          d = $(d);
+          //   alert(d.html());
+          $("html, body").animate(
+            {
+              scrollTop: d.offset().top
+            },
+            1000,
+            "linear"
+          );
+        });
+      });
+    </script>
   </body>
 </html>

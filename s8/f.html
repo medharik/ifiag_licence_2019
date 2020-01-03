@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body oncontextmenu="return false">
+    <div class="alert"></div>
+    <form action="https://google.fr">
+      <div>
+        ifiag <input type="radio" name="d" id="dif" value="ifiag" /> Autre
+        <input type="radio" name="d" id="dautre" value="autre" />
+      </div>
+      <br />
+      <div>
+        Email :
+        <input
+          type="text"
+          name="email"
+          id="email"
+          data-requis="oui"
+          data-nom="email"
+        />
+      </div>
+      <div>
+        Mot de passe :
+        <input
+          type="text"
+          name="p"
+          id="p"
+          data-requis="oui"
+          data-nom="mot de passe"
+        />
+      </div>
+      <div>
+        confirmation Mot de passe :
+        <input
+          type="text"
+          name="c"
+          id="c"
+          data-nom="confirmation mot de passe"
+        />
+      </div>
+      <div>
+        <button type="submit">Valider</button>
+      </div>
+    </form>
+
+    <script>
+      //arrow function
+      const valide = (champs, model) => {
+        return model.test(champs.value);
+      };
+      const al = document.querySelector(".alert");
+      let em = document.querySelector("input[name='email']");
+      let d = document.querySelector("input[type='radio']");
+
+      document
+
+        .querySelector("form button")
+
+        .addEventListener("click", function(e) {
+          e.preventDefault(); // annule le comportement par defaut
+          al.innerHTML = "";
+
+          // alert(e.srcElement.innerHTML);
+          for (let c of document.querySelectorAll("input")) {
+            if (c.dataset.requis && c.value == "") {
+              //   console.log(c.dataset.nom + " est requis");
+
+              if (c.dataset.nom)
+                al.innerHTML += "<br>" + c.dataset.nom + " est requis";
+            }
+
+            if (d.checked && d.value === "ifiag") {
+              //alert(d.value);
+              if (!valide(em, /[a-z]{1,}@ifiag.ma/)) {
+                al.innerHTML += "<br> email est incorrect";
+              }
+            }
+            if (d.checked && d.value == "autre") {
+              if (!valide(em, /^[a-z]{1,}@*S+[.][a-z]{2,3}$/)) {
+                al.innerHTML += "<br>email est incorrect";
+              }
+            }
+            d.checked = false;
+          }
+        });
+    </script>
+  </body>
+</html>
